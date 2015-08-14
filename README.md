@@ -65,22 +65,30 @@ Lib https://github.com/dzenbot/DZNEmptyDataSet
 
 ### Notifications
   
-  * send push notification when new message is received
-  * receive push notification and open correspondent chat window
-  * allow to hide content/author of message (a-la Messages)
-  * virbate/play audio when message is received/sent
+ * send push notification when new message is received
+ * receive push notification and open correspondent chat window
+ * allow to hide content/author of message (a-la Messages)
+ * virbate/play audio when message is received/sent
   
-### Web Sockets / MQTT
 
-No more http :)
+### Unread
+ 
+ * show number of unread messages
+ * indicate that chat has unread messages in list of chats
+ * show 'unread' messages inside chat
+ * mark message as read
 
-  * ios side:
-    * https://github.com/square/SocketRocket
-    * https://github.com/jmesnil/MQTTKit
-  * server side + ios lib:
-    * https://pusher.com/
-    * https://www.pubnub.com/
-    * https://github.com/RocketChat/Rocket.Chat
+### Transport layer
+
+You can send messages via http to your server or user sockets/mqtt.
+
+ * ios side:
+   * https://github.com/square/SocketRocket
+   * https://github.com/jmesnil/MQTTKit
+ * server side + ios lib:
+   * https://pusher.com/
+   * https://www.pubnub.com/
+   * https://github.com/RocketChat/Rocket.Chat
 
 ### Media
 
@@ -95,4 +103,5 @@ No more http :)
   * share message (open native sharing action sheet)
   * store local history (when user opens chat, show cached messages)
   * reload chat in background to show always latest data
-  * data types support: urls, tel, dates (tap on link - open webpage (in Safari, in inner webbrowser)).
+  * data types support: urls, tel, dates (tap on link - open webpage (in Safari, in inner webbrowser))
+  * custom keyboard/stickers
