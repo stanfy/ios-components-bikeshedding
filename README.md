@@ -102,7 +102,7 @@ Encryption libs:
   * https://github.com/aerogear/aerogear-crypto-ios
 
 
-### Application life circle
+### Application life cycle
 
 Active chat always shows actual data: last chat message, message counter, chat name, user's name.
 
