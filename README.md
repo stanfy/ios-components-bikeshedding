@@ -137,3 +137,54 @@ Ensure handling correctly such cases:
   * custom keyboard/stickers
   * message bubbles dynamic behaviour (if any)
   * data types support: urls, tel, dates (tap on link - open webpage (in Safari, in inner webbrowser))
+
+
+--------------
+
+## Table / List
+
+### UI
+
+ * cells with static height
+ * cells with dynamic height
+ * footer/header/sections
+
+### Basic actions
+
+ * smooth scrolling
+ * tap on cell to perform action (open new screen)
+ * pull-down-to reload (pull from top to reload whole list)
+ * pull-down-to fetch new data (Twitter style)
+ * load more (pull from bottom)
+
+### More actions
+
+ * tap on button inside cell (like/reply buttons)
+ * swipe to left to open cell menu (archive, remove, edit, more)
+ * remove cell (swipe to left) with animation
+ * add cell with animation
+ * reload single cell
+
+### States
+
+ * table no data:
+  * show fullscreen 'no data' view
+  * table is loading, show full screen 'loading' view 
+  * connection is broken, show full screen 'error tap to retry' view
+  
+ * table has data (easy mode):
+  * table is loading, show refresh indicator
+  * connection is broken, show error indicator
+ 
+ 
+### Media
+
+ * use placeholders
+ * 'smart' download:
+  * start download images on current and next visible cells
+  * increase download queue priority for current visible cells
+  * decrease priority for far invisible cells
+ * fade-in image when it's downloaded
+
+### Advanced
+
