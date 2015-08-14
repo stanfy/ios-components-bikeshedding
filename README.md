@@ -1,6 +1,7 @@
 # ios-components-bikeshedding
-often we create same components again and again. this is short reminder that simple feature
+often we create same components again and again. this is short reminder that simple feature contains really a lot of pieces
 
+--------------
 
 ## Chat
 
@@ -90,6 +91,29 @@ You can send messages via http to your server or user sockets/mqtt.
    * https://www.pubnub.com/
    * https://github.com/RocketChat/Rocket.Chat
 
+### Security
+
+Use https and encrypt messages using private keys.
+
+Encryption libs:
+
+  * https://github.com/cossacklabs/themis/
+  * https://github.com/RNCryptor/RNCryptor
+  * https://github.com/aerogear/aerogear-crypto-ios
+
+
+### Application life circle
+
+Active chat always shows actual data: last chat message, message counter, chat name, user's name.
+
+Ensure handling correctly such cases:
+
+ * chat is opened > device looses connection > device restores connection
+ * chat is opened > connection type changes from wi-fi to cellular and vice versa
+ * chat is opened > device screen is turned off manually > user activates device and app opens
+ * chat is opened > device goes to sleep > user activates device and app opens
+ * chat is opened > app goes to background > app goes to foreground
+
 ### Media
 
   * show placeholder while media data is downloading
@@ -98,10 +122,18 @@ You can send messages via http to your server or user sockets/mqtt.
 
 ### Advanced
   
+ actions:
   * allow to edit text message
   * allow to delete message (text, media). show delete animation
   * share message (open native sharing action sheet)
+  
+ logic:
   * store local history (when user opens chat, show cached messages)
   * reload chat in background to show always latest data
-  * data types support: urls, tel, dates (tap on link - open webpage (in Safari, in inner webbrowser))
+  * allow to rename chat
+  * open user profile on tapping on his avatar
+ 
+ ui:
   * custom keyboard/stickers
+  * message bubbles dynamic behaviour (if any)
+  * data types support: urls, tel, dates (tap on link - open webpage (in Safari, in inner webbrowser))
