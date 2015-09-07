@@ -188,3 +188,48 @@ Ensure handling correctly such cases:
 
 ### Advanced
 
+--------------
+
+## Comments
+
+### Basic actions
+
+As user i want to:
+
+* add comment to object (post, image, video, etc.)
+* fetch new comments
+* read old comments
+* delete my comment
+* flag inappropriate comment
+
+### Receiving comments
+
+* manually reload list of comments to get new comments
+* automatically load new comments when screen with comments is opened
+
+### Adding comments
+
+* show characters limit, if we have one
+* send comment: show new comment immediately and send it in background, or wait for successful response from server
+* show error in case comment wasn't added due to connectivity / server issues
+* store comment failed to send locally and add ability to resend it
+
+### Deleting comments:
+* 
+
+### Flagging comments:
+*
+
+Usually comments should be displayed in a sequence they were sent. Set timestamp on client side when adding new comment.
+
+### States
+
+* there are no comments
+* comments are loading
+* comments couldn't be loaded
+* comments are reloading / failed to reload
+* load more comments / failed to load more
+
+### Advanced
+
+* Nested comments
