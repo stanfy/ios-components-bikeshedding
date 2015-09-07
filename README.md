@@ -207,6 +207,8 @@ As user i want to:
 * manually reload list of comments to get new comments
 * automatically load new comments when screen with comments is opened
 
+Usually comments should be displayed in a sequence they were sent. Set timestamp on client side when adding new comment.
+
 ### Adding comments
 
 * show characters limit, if we have one
@@ -215,12 +217,16 @@ As user i want to:
 * store comment failed to send locally and add ability to resend it
 
 ### Deleting comments:
-* 
+* use simple interaction recognized by user to delete comment (swipe, single tap)
+* show confirmation dialog before deleting comment
+* show error in case comment wasn't deleted due to connectivity / server issues
 
 ### Flagging comments:
-*
+* use simple interaction recognized by user to flag comment (swipe, single tap)
+* show confirmation dialog before flagging comment
+* show error in case comment wasn't flagged due to connectivity / server issues
 
-Usually comments should be displayed in a sequence they were sent. Set timestamp on client side when adding new comment.
+Error handling should depend on how you show activity to your users - blocking interaction and showing error message on same screen, or sending request in background so user should see error message even when navigating to other screens.
 
 ### States
 
@@ -232,4 +238,6 @@ Usually comments should be displayed in a sequence they were sent. Set timestamp
 
 ### Advanced
 
-* Nested comments
+* Nested comments:
+ * comments may have several levels
+ * clearly indicate on which level user is posting his comment (reply to post, reply to other comment)
