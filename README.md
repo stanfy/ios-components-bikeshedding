@@ -241,3 +241,16 @@ Error handling should depend on how you show activity to your users - blocking i
 * Nested comments:
  * comments may have several levels
  * clearly indicate on which level user is posting his comment (reply to post, reply to other comment)
+ 
+## Apple Pay
+ 
+### Testing
+ 
+1. Use device with latest iOS version
+2. Create test account in itunesconnect for your app, enable Apple Pay for this account
+3. Change phone region to USA
+4. Logout form App Store and iCloud
+5. Login into iCloud using test account
+6. Open Wallet and add test card from the list (https://developer.apple.com/support/apple-pay-sandbox/)
+* ???
+7. Profit
